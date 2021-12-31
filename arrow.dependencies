@@ -42,5 +42,10 @@
     "target_path": "packages/apps/MotoDolbyV3",
     "branch": "eleven",
     "remote": "motorola"
+  },
+  {
+    "repository": "ThankYouMario/proprietary_vendor_qcom_sdclang",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-sdm632-sdllvm",
+    "remote": "ruby-12"
   }
 ]

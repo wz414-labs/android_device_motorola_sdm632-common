@@ -14,24 +14,7 @@ allow perfd hal_power_default:process signull;
 allow perfd cgroup:file rw_file_perms;
 
 allow perfd proc:file rw_file_perms;
-allow perfd sysfs_scsi_host:file r_file_perms;
-r_dir_file(perfd, sysfs_graphics)
-r_dir_file(perfd, sysfs_socinfo)
 
 allow perfd sysfs_devices_system_cpu:file w_file_perms;
 
 allow perfd perfd_socket:sock_file write;
-
-allow perfd device_latency:chr_file w_file_perms;
-
-# wahoo sysfs_msm_subsys is sysfs_devfreq + sysfs_kgsl
-r_dir_file(perfd, sysfs_devfreq)
-allow perfd sysfs_devfreq:file w_file_perms;
-
-r_dir_file(perfd, sysfs_kgsl)
-allow perfd sysfs_kgsl:file w_file_perms;
-
-allow perfd sysfs_msm_perf:dir r_dir_perms;
-allow perfd sysfs_msm_perf:file rw_file_perms;
-
-get_prop(perfd, vendor_freq_prop)
